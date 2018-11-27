@@ -1,4 +1,4 @@
-//Vendor js
+//Vendor
 const express = require('express')
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs')
@@ -43,5 +43,8 @@ app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db) });
 
 //?Image endpoint
 app.put('/image', (req, res) => { image.handleImage(req, res, db) })
+
+//?Image Api
+app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
 app.listen(3000, () => { console.log('App is running on port 3000') })
