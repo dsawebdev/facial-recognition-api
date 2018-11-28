@@ -15,12 +15,11 @@ const db = knex({
   client: 'pg',
   connection: {
     host : '127.0.0.1',
-    user : 'devon',
-    password : 'rylee',
-    database : 'facialrecognition'
+    user : 'dsa',
+    password : '',
+    database : 'facial-recognition'
   }
 });
-
 
 const app = express();
 
@@ -28,7 +27,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 //? Root
-app.get('/', (req, res) => { res.send('it is working!') })
+app.get('/', (req, res) => { res.send(db.users) })
 
 //? Signin Endpoint
 app.post('/signIn', (req, res) => { signIn.handleSignIn(req, res, db, bcrypt) });

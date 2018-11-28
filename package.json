@@ -4,7 +4,7 @@
   "description": "API for Facial Recognition Ap",
   "main": "server.js",
   "scripts": {
-    "web": "server.js"
+    "web": "nodemon server.js"
   },
   "author": "Devon Anderson",
   "license": "MIT",
