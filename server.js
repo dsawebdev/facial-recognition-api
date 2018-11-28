@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 //? Root
-app.get('/', (req, res) => { res.send(db.users) })
+app.get('/', (req, res) => { res.send('it works') })
 
 //? Signin Endpoint
 app.post('/signIn', (req, res) => { signIn.handleSignIn(req, res, db, bcrypt) });
